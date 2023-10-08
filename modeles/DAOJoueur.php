@@ -1,23 +1,5 @@
 <?php
-include_once('database.php');
-
-
-if (isset($_POST['code'])) {
-    $code = $_POST['code'];
-    switch ($code) {
-        case '0':
-            if (isset($_POST['nom']) && isset($_POST['prenom']) &&  isset($_POST['age']))
-                echo json_encode(DAOJoueur::addEquipe($_POST['nom'], $_POST['prenom'], (int)$_POST['age']));
-            break;
-    }
-} else if (isset($_GET["resource"])) {
-    $ressource = $_GET['resource'];
-    switch ($ressource) {
-        case 'joueurs':
-            echo json_encode(DAOJoueur::getAll());
-            break;
-    }
-}
+include_once('PDOMySQLConnector.php');
 
 class DAOJoueur
 {
@@ -32,7 +14,7 @@ class DAOJoueur
         return $joueurs;
     }
 
-    public static function addEquipe(string $nom, string $prenom, int $age)
+    public static function ajouterJoueur(string $nom, string $prenom, int $age)
     {
         $mysqlClient = PDOMySQLConnector::getClient();
 

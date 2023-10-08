@@ -10,50 +10,15 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="vues/styles.css" rel="stylesheet" />
   </head>
 
   <body>
     <section id="joueurRegister" class="container">
       <h2>Les joueurs enregistrés</h2>
+      <a href="vues/ajouterJoueur.html" class="btn btn-primary">Ajouter un nouveau joueur</a>
     </section>
 
-    <section class="container">
-      <h2>Ajouter un nouveau joueur</h2>
-      <form id="addJoueur">
-        <div class="form-group">
-          <label for="nom">Nom</label>
-          <input
-            type="text"
-            class="form-control"
-            name="nom"
-            placeholder="Nom du joueur"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="nom">Prénom</label>
-          <input
-            type="text"
-            class="form-control"
-            name="prenom"
-            placeholder="Nom du joueur"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="nom">Age</label>
-          <input
-            type="number"
-            class="form-control"
-            name="age"
-            placeholder="Age du joueur"
-          />
-        </div>
-
-        <button type="submit" class="btn btn-primary">Ajouter</button>
-      </form>
-    </section>
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -62,7 +27,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"
   ></script>
-  <script src="js/joueur.js"></script>
+  <script src="vues/js/joueur.js"></script>
 
   <script>
     $(document).ready(function () {
