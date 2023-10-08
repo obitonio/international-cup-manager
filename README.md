@@ -33,17 +33,17 @@ C'est la partie serveur du projet faite en PHP
 
 Le fichier `database.php` gère la connexion à la base de données et rends accessible une connexion à la base de données sous la forme d'un [singleton](<https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception)>).
 
-#### b) Les DAO
+#### b) Les DAO (Data Access Object)
 
 La première partie du code du fichier correspond au code qui va être éxecuté par les requetes [AJAX](<https://fr.wikipedia.org/wiki/Ajax_(informatique)>)
 
 ```php
-// Verifie l'existence des variables envoyé par les requetes de type GET ou POST
+// Verifie l'existence des variables envoyées par les requetes de type GET ou POST
 if (isset($_POST['code'])) {
     $code = $_POST['code'];
     switch ($code) {
         case '0':
-            //Recupere les parametre envoyé par le formulaire d'ajout de joueur
+            //Recupere les parametres envoyés par le formulaire d'ajout de joueur
             if (isset($_POST['nom']) && isset($_POST['prenom']) &&  isset($_POST['age'])) {
                 //Renvoit les données au format [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)
                 echo json_encode(DAOJoueur::addEquipe($_POST['nom'], $_POST['prenom'], (int)$_POST['age']));
