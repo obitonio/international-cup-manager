@@ -79,7 +79,7 @@ La classe `JoueurController` permet de gérer le traitement de toutes les requê
 
 ## Dépendance installée
 
-- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) : Fourni des composants et classe CSS.
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) : Fourni des composants et des classes CSS.
 
 ## Liens utiles
 
